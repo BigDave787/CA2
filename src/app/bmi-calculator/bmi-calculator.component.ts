@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-bmi-calculator',
@@ -8,13 +7,8 @@ import { Location } from "@angular/common";
 })
 export class BmiCalculatorComponent implements OnInit {
 
-   constructor(private location: Location) { }
- 
-    goBack() {
-        this.location.back();
-    }
+  constructor() { }
 
   ngOnInit() {
   }
-
 }

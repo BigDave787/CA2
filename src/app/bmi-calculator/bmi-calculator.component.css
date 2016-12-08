@@ -1,0 +1,25 @@
+#container{
+  padding-left: 50px; 
+
+}
+
+
+#stone{
+ float: left;
+ padding-right: 40px;
+}
+
+#pounds{
+ float: left;
+ padding-right: 40px;
+}
+
+#feet{
+ float: left;
+ padding-right: 40px;
+}
+
+#inches{
+ float: left;
+ padding-right: 40px;
+}

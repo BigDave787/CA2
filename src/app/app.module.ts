@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from "@angular/router";
 import { AppComponents, AppRoutes } from "./app.routing";
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ...AppComponents
+        ...AppComponents,
+        HomePageComponent
     ],
     imports: [
         BrowserModule,

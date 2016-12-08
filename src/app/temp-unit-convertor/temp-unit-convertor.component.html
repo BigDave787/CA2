@@ -1,16 +1,18 @@
-<p>
+<div id="container">
+  <h1>Temperature Unit Convertor</h1>
   <b>Celcius</b><br>
-  <input #cel cel.value='' /><br><br>
+  <input size="40px" #cel cel.value='' /><br><br>
 
   <b>Fahrenheit</b><br>
-   <input #fahr fahr.value='' /><br><br>
+   <input size="40px" #fahr fahr.value='' /><br><br>
 
-  <button (click)="onClickMe(myMessage.value)">Convert</button>
+  <button (click)="onClickMe(myMessage.value)">Convert</button><br><br>
+  <h4>Total conversions: </h4>
+  <input size="10px"/>
+  
+</div>
 
 
 
-</p>
 
-  <p>
-    <a (click)="navigate()">Navigate via TypeScript</a> | <a [routerLink]="['Bmi Calculator']">Navigate via Markup</a>
-</p>
+

@@ -1,7 +1,54 @@
-<p>
-  bmi-calculator works!
-</p>
+<!--Container Div Start-->
+<div id="container">
+  <h1>BMI Calculator</h1>
+  <h3>Enter your Weight</h3>
+<!--Weight Div Start-->
+<div id="weight">
+  <div id="stone">
+  <b>Stone</b><br>
+  <input #cel cel.value='' />
+  </div>
 
-<p>
-    <a (click)="goBack()">Go Back via TypeScript</a> | <a [routerLink]="['/']">Go Back via Markup</a>
-</p>
+  <div id="pounds">
+  <b>Pounds</b><br>
+  <input #cel cel.value='' />
+  </div>
+
+  <div id="kg">
+  <b>or KGS</b><br>
+  <input #cel cel.value='' />
+  </div>
+  <!--Weight Div End-->
+</div> <br><br>
+
+<h3>And your Height</h3>
+<!--Height Div Start-->
+<div id="height">
+  <div id="feet">
+  <b>Feet</b><br>
+  <input #cel cel.value='' />
+  </div>
+
+  <div id="inches">
+  <b>Inches</b><br>
+  <input #cel cel.value='' />
+  </div>
+
+  <div id="metres">
+  <b>or Metres</b><br>
+  <input #cel cel.value='' />
+  </div>
+<!--Height Div End-->
+</div>
+
+<!--Calculate BMI Button-->
+<br><button (click)="onClickMe(myMessage.value)">Calculate BMI</button><br>
+  
+<h6><b>Enter your weight either in stones/pounds or kilograms and your height either in feet/inches or metres.</b></h6><br>
+
+<h6><b>Result:</b></h6>
+<input size="75px"/>
+
+<!--Container Div End-->
+</div>
+ 
