@@ -10,9 +10,11 @@ export class TempUnitConvertorComponent implements OnInit {
  
    celsius: number = null;
    fahrenheit: number = null;
+   counter: number = 0;
 
     CelToFahr() {
       this.fahrenheit = this.celsius * 9.0/5.0 + 32;
+      this.counter++;
     }
 
 

@@ -4,8 +4,6 @@
 <!--container-->
 <div class="container">
 
-
-
   <h3><b>Temperature Unit Convertor</b></h3><br>
   <b>Celcius</b><br>
   <div class="form-group">
@@ -21,7 +19,7 @@
   <button (click)=(CelToFahr())>Convert</button><br><br>
   
   <h4>Total conversions: </h4>
-  <input size="10px"/>
+  <input [(ngModel)]="counter" size="10px"/>
 
 <!--container end--> 
 </div>
