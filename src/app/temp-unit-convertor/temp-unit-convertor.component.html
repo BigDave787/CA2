@@ -1,20 +1,31 @@
 <!--background div-->
 <div class="jumbotron text-center">
+
 <!--container-->
 <div class="container">
+
+
+
   <h3><b>Temperature Unit Convertor</b></h3><br>
   <b>Celcius</b><br>
-  <input size="40px" #cel cel.value='' /><br><br>
+  <div class="form-group">
+    <input [(ngModel)]="celsius"  name="celsius" (keyup.enter)="CelToFahr()" type="number" step="any" class="form-control" placeholder="Enter a number">
+  </div>
+
 
   <b>Fahrenheit</b><br>
-   <input size="40px" #fahr fahr.value='' /><br><br>
+  <div class="form-group">
+    <input [(ngModel)]="fahrenheit" name="fahrenheit" (keyup.enter)="FahrToCel()" type="number" step="any" class="form-control" placeholder="Enter a number">
+  </div>
 
-  <button (click)="onClickMe(myMessage.value)">Convert</button><br><br>
+  <button (click)=(CelToFahr())>Convert</button><br><br>
+  
   <h4>Total conversions: </h4>
   <input size="10px"/>
 
 <!--container end--> 
 </div>
+
 <!--end-->
 </div>
 

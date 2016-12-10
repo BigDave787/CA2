@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./temp-unit-convertor.component.css']
 })
 export class TempUnitConvertorComponent implements OnInit {
+   constructor() { }
+ 
+   celsius: number = null;
+   fahrenheit: number = null;
 
-    constructor() { }
+    CelToFahr() {
+      this.fahrenheit = this.celsius * 9.0/5.0 + 32;
+    }
 
-   
+
+    FahrToCel() {
+      this.celsius = (this.fahrenheit - 32) * 5.0/9.0;
+    }
+
+
   ngOnInit() {
   }
 
