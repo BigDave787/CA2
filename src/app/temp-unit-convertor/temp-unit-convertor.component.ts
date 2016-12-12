@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class TempUnitConvertorComponent implements OnInit {
    constructor() { }
  
+   //variables
    celsius: number = null;
    fahrenheit: number = null;
    counter: number = 0;
 
+
+   //methods/functions
     CelToFahr() {
       this.fahrenheit = this.celsius * 9.0/5.0 + 32;
       this.counter++;

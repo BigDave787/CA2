@@ -1,25 +1,5 @@
 .container{
   margin:auto;
-  width:34%;
+  width:35%;
 }
 
-
-#stone{
- float: left;
- padding-right: 40px;
-}
-
-#pounds{
- float: left;
- padding-right: 40px;
-}
-
-#feet{
- float: left;
- padding-right: 40px;
-}
-
-#inches{
- float: left;
- padding-right: 40px;
-}
