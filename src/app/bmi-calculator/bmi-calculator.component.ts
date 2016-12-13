@@ -16,7 +16,7 @@ export class BmiCalculatorComponent implements OnInit {
   feet: number = null;
   inches: number = null;
   metres: number = null;
-  message: String = "hello";
+  message: String = null;
 
   //methods/functions
 
@@ -28,18 +28,37 @@ export class BmiCalculatorComponent implements OnInit {
     if(weight > 0 && height > 0){	
     var finalBmi = weight/(height*height)
 
-    if(finalBmi < 18.5){
-    this.message = "Your estimated BMI is "+ finalBmi + " That you are too thin."
+    if(finalBmi < 16){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Severe Thinness."
+    }
+
+    if(finalBmi >= 16 && finalBmi <= 17){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Moderate Thinness."
+    }
+
+    if(finalBmi > 17 && finalBmi <= 18.5){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Mild Thinness."
     }
 
     if(finalBmi > 18.5 && finalBmi <= 25){
-    this.message = "Your estimated BMI is "+ finalBmi + " That you are healthy."
+    this.message = "Your estimated BMI is "+ finalBmi + " : Normal."
     }
 
-    if(finalBmi > 25){
-    this.message = "Your estimated BMI is "+ finalBmi + " That you have overweight."
+    if(finalBmi > 25 && finalBmi <= 30){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Overweight."
     }
 
+    if(finalBmi > 30 && finalBmi <= 35){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Obese Class 1."
+    }
+
+    if(finalBmi > 35 && finalBmi <= 40){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Obese Class 2."
+    }
+
+    if(finalBmi > 40){
+    this.message = "Your estimated BMI is "+ finalBmi + " : Obese Class 3."
+    }
     }
     }
 
@@ -80,7 +99,15 @@ export class BmiCalculatorComponent implements OnInit {
     this.inches = this.metres * 39.370;
   }
 
-
+  clearAll(){
+      this.stone = null;
+      this.pounds = null;
+      this.kgs = null;
+      this.feet = null;
+      this.inches = null;
+      this.metres = null;
+      this.message = null;
+    }
 
 
 

@@ -5,18 +5,19 @@
 <div class="container">
 
   <h3><b>Temperature Unit Convertor</b></h3><br>
-  <b>Celcius</b><br>
+  <b>Celsius</b><br>
   <div class="form-group">
-    <input [(ngModel)]="celsius"  name="celsius" (keyup.enter)="CelToFahr()" type="number" step="any" class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="celsius"  name="celsius" (keyup)="CelToFahr()" type="number" step="any" class="form-control" placeholder="Enter a number">
   </div>
 
 
   <b>Fahrenheit</b><br>
   <div class="form-group">
-    <input [(ngModel)]="fahrenheit" name="fahrenheit" (keyup.enter)="FahrToCel()" type="number" step="any" class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="fahrenheit"  name="fahrenheit" (keyup)="FahrToCel()" type="number" step="any" class="form-control" placeholder="Enter a number">
   </div>
 
-  <button (click)=(CelToFahr())>Convert</button><br><br>
+  <button (click)="CelToFahr(); counter = counter + 1">Convert</button><br><br><br>
+  <button (click)="clearAll()">Clear All</button>
   
   <h4>Total conversions: </h4>
   <input [(ngModel)]="counter" size="10px"/>

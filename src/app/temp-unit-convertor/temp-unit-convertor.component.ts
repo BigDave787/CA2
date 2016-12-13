@@ -17,12 +17,16 @@ export class TempUnitConvertorComponent implements OnInit {
    //methods/functions
     CelToFahr() {
       this.fahrenheit = this.celsius * 9.0/5.0 + 32;
-      this.counter++;
     }
 
 
     FahrToCel() {
       this.celsius = (this.fahrenheit - 32) * 5.0/9.0;
+    }
+
+    clearAll(){
+      this.celsius = null;
+      this.fahrenheit = null;
     }
 
 

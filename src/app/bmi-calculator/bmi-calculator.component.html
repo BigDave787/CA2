@@ -11,25 +11,26 @@
   <div id="stone">
   <b>Stone</b><br>
   <div class="form-group">
-    <input [(ngModel)]="stone"  name="stone" (keyup.enter)="stoneConvert()" type="number"  class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="stone"  name="stone" (keyup)="stoneConvert()" type="number"  class="form-control" placeholder="Enter a number">
   </div>
   </div>
 
   <div id="pounds">
   <b>Pounds</b><br>
   <div class="form-group">
-    <input [(ngModel)]="pounds"  name="pounds" (keyup.enter)="poundConvert()" type="number"  class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="pounds"  name="pounds" (keyup)="poundConvert()" type="number"  class="form-control" placeholder="Enter a number">
   </div>
   </div>
 
   <div id="kg">
   <b>OR KGS</b><br>
   <div class="form-group">
-    <input [(ngModel)]="kgs"  name="kg" (keyup.enter)="kgConvert()" type="number"  class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="kgs"  name="kg" (keyup)="kgConvert()" type="number"  class="form-control" placeholder="Enter a number">
   </div>
   </div>
   <!--Weight Div End-->
-</div> <br><br>
+</div> <br>
+
 
 <h3>And your Height</h3>
 <!--Height Div Start-->
@@ -37,28 +38,29 @@
   <div id="feet">
   <b>Feet</b><br>
   <div class="form-group">
-    <input [(ngModel)]="feet"  name="feet" (keyup.enter)="feetConvert()" type="number"  class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="feet"  name="feet" (keyup)="feetConvert()" type="number"  class="form-control" placeholder="Enter a number">
   </div>
   </div>
 
   <div id="inches">
   <b>Inches</b><br>
   <div class="form-group">
-    <input [(ngModel)]="inches"  name="inches" (keyup.enter)="inchesConvert()" type="number"  class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="inches"  name="inches" (keyup)="inchesConvert()" type="number"  class="form-control" placeholder="Enter a number">
   </div>
   </div>
 
   <div id="metres">
   <b>OR Metres</b><br>
   <div class="form-group">
-    <input [(ngModel)]="metres"  name="metres" (keyup.enter)="metresConvert()" type="number"  class="form-control" placeholder="Enter a number">
+    <input [(ngModel)]="metres"  name="metres" (keyup)="metresConvert()" type="number"  class="form-control" placeholder="Enter a number">
   </div>
   </div>
 <!--Height Div End-->
 </div>
 
+<button (click)="clearAll()">Clear All</button><br><br>
 <!--Calculate BMI Button-->
-<br><br><button (click)="(calculateBmi())">Calculate BMI</button><br>
+<br><button (click)="(calculateBmi())">Calculate BMI</button><br>
   
 <h6><b>Enter your weight either in stones/pounds or kilograms and your height either in feet/inches or metres.</b></h6><br>
 
