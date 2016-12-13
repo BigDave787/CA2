@@ -26,7 +26,7 @@ export class BmiCalculatorComponent implements OnInit {
     var height = this.metres
 
     if(weight > 0 && height > 0){	
-    var finalBmi = weight/(height*height)
+    var finalBmi = Math.round(weight/(height*height) * 100) / 100;
 
     if(finalBmi < 16){
     this.message = "Your estimated BMI is "+ finalBmi + " : Severe Thinness."
